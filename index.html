@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+    <style>
+    .fa{
+        font-size: 30px;
+        color: #b94071;
+    }
+    .faa{
+        color: white;
+        font-weight: 700;
+    }
+    .cont{
+        background-color: #b94071;
+        height: 90vh;
+    }
+    #demo{
+        background-color: blue;
+        float: left;
+        height: 90vh;
+        width: 35%;
+    }
+    #demo1{
+        background-color:teal;
+        float: right;
+        height: 90vh;
+        width: 35%;
+    }
+    #demo3{
+        background-color:  #b94071;
+        float: left;
+        height: 90vh;
+        width: 30%;
+        display: none;
+    }
+    #demo4{
+        background-color:lightblue;
+        float: left;
+        height: 90vh;
+        width: 30%;
+
+    }
+    .button{
+        margin-top: 15%;
+        margin-left: 25%;
+    }
+    .ull,li{
+        text-decoration: none;
+        margin-left: 145%;
+        margin-top: 30%;
+        font-size: 30px;
+        color: white;
+    }
+    .p1,.p2{
+        color: black;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 10%;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <i class="fa faa fa-free-code-camp" aria-hidden="true"></i>&nbsp;&nbsp;
+            <a class="navbar-brand" style="color:white;font-weight:700" href="#">AnimatedNav Toggle&Menu</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <i class="fa fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Change View</button>&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Signup</button>&nbsp;&nbsp;&nbsp;
+      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Login</button>
+    </form>
+  </div>
+</nav>
+
+<div class="cont">
+
+    <div id="demo"></div>
+
+    <div id="demo4">
+        <p class="p1">Woot! Got the (vanilla) Javascript to work!</p>
+        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+             Illum labore cumque, laborum, dolorem dolor doloribus iste qui omnis? Consequuntur<br>
+              sapiente mollitia iure quas. Rem nobis tenetur, est accusamus iste dolor, necessitatibus, <br>
+              facilis error ratione aliquid sequi voluptates dignissimos. Quidem, quam, rem? Molestias <br>
+                </p>
+        </div>
+        
+    <div id="demo3">
+        <ul class="ull">
+            <li>Demo</a></li>
+            <li>Faces</a></li>
+            <li>Blog</a></li>
+            <li>About</a></li>
+            <li>Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="demo1">
+        <input type="button" onclick="show()" class="button" id="button" value="X">
+    </div>
+</div>
+
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var x = 1;
+    function show(){
+        x += 1;
+        // console.log(i);
+        if(x%2==0){
+        $("#demo").animate({
+            width: "5%"
+        });
+        $("#demo1").animate({
+            width: "5%"
+        });
+        $('#demo3').show();
+        $('#demo4').hide();
+    }else{
+        $("#demo").animate({
+            width: "35%"
+        });
+        $("#demo1").animate({
+            width: "35%"
+        });
+        $('#demo3').hide();
+        $('#demo4').show();
+        $("#demo3").animate({
+            width: "25%"
+        });
+    }
+}
+</script>
