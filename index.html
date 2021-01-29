@@ -36,7 +36,7 @@
         background-color:  #b94071;
         float: left;
         height: 90vh;
-        width: 30%;
+        width: 90%;
         display: none;
     }
     #demo4{
@@ -50,18 +50,22 @@
         margin-top: 15%;
         margin-left: 25%;
     }
-    .ull,li{
-        text-decoration: none;
-        margin-left: 145%;
-        margin-top: 30%;
+    .ull{
+        list-style-type: none;
+        margin-top: 42%;
+        margin-left: 25%;
         font-size: 30px;
-        color: white;
+        color: blue;
     }
     .p1,.p2{
-        color: black;
-        font-size: 25px;
+        color: white;
+        font-size: 20px;
         text-align: center;
-        margin-top: 10%;
+        margin-top: 5%;
+    }
+    .butt{
+        display: none;
+        margin-top: 45%;
     }
     </style>
 </head>
@@ -88,16 +92,23 @@
 
     <div id="demo"></div>
 
-    <div id="demo4">
+    <div id="demo3">
         <p class="p1">Woot! Got the (vanilla) Javascript to work!</p>
-        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-             Illum labore cumque, laborum, dolorem dolor doloribus iste qui omnis? Consequuntur<br>
-              sapiente mollitia iure quas. Rem nobis tenetur, est accusamus iste dolor, necessitatibus, <br>
-              facilis error ratione aliquid sequi voluptates dignissimos. Quidem, quam, rem? Molestias <br>
+        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Illum labore cumque, laborum, dolorem dolor doloribus iste qui omnis? Consequuntur
+              sapiente mollitia iure quas. Rem nobis tenetur, est accusamus iste dolor, necessitatibus,
+              facilis error ratione aliquid sequi voluptates dignissimos. Quidem, quam, rem? Molestias
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Illum labore cumque, laborum, dolorem dolor doloribus iste qui omnis? Consequuntur
+              sapiente mollitia iure quas. Rem nobis tenetur, est accusamus iste dolor, necessitatibus, 
+              facilis error ratione aliquid sequi voluptates dignissimos. Quidem, quam, rem? Molestias 
+               Illum labore cumque, laborum, dolorem dolor doloribus iste qui omnis? Consequuntur
+              sapiente mollitia iure quas. Rem nobis tenetur, est accusamus iste dolor, necessitatibus, 
+              facilis error ratione aliquid sequi voluptates dignissimos. Quidem, quam, rem? Molestias 
                 </p>
         </div>
         
-    <div id="demo3">
+    <div id="demo4">
         <ul class="ull">
             <li>Demo</a></li>
             <li>Faces</a></li>
@@ -109,6 +120,7 @@
 
     <div id="demo1">
         <input type="button" onclick="show()" class="button" id="button" value="X">
+        <input type="button" onclick="show()" class="butt" id="button1" value="#">
     </div>
 </div>
 
@@ -129,6 +141,8 @@
         });
         $('#demo3').show();
         $('#demo4').hide();
+        $('#button').hide();
+        $('#button1').show();
     }else{
         $("#demo").animate({
             width: "35%"
@@ -139,8 +153,10 @@
         $('#demo3').hide();
         $('#demo4').show();
         $("#demo3").animate({
-            width: "25%"
+            width: "90%"
         });
+        $('#button').show();
+        $('#button1').hide();
     }
 }
 </script>
